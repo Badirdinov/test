@@ -1,0 +1,10 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+
+@layer base {
+  body {
+    background: rgba(178, 236, 248, 0.4);
+  }
+}

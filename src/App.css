@@ -1,0 +1,146 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    height: 90vh;
+}
+
+.wrapper {
+    display: flex;
+    align-items: start;
+    gap: 40px;
+}
+
+.filters {
+    max-width: 320px;
+    width: 100%;
+    background: white;
+    text-align: start;
+    border-radius: 6px;
+    padding-bottom: 24px;
+
+    & .filters-items {
+        & h2 {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+            opacity: .7;
+            padding: 24px 14px;
+        }
+
+        & .currency {
+            display: flex;
+            align-items: center;
+            padding: 0 14px 0;
+
+            & button {
+                width: 100%;
+                padding: 24px 14px;
+                font-weight: 600;
+            }
+            & button:first-child {
+                border-radius: 8px 0 0 8px;
+            }
+            & button:last-child {
+                border-radius: 0 8px 8px 0;
+            }
+        }
+        & .checkboxes {
+            & .checkboxes-item {
+                padding: 18px 14px;
+                transition: all .3s linear;
+                cursor: pointer;
+                &:hover {
+                    background: rgba(19, 169, 250, 0.2);
+                }
+                & label {
+                    font-size: 18px;
+                    opacity: .6;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.tickets {
+    width: 100%;
+    height: 700px;
+    border-radius: 6px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    & .ticket {
+        background: white;
+        border-radius: 6px;
+        display: flex;
+        align-items: flex-start;
+        & .ticket-left {
+            text-align: center;
+            flex: 1;
+            padding: 24px;
+            border-right: 1px solid rgba(169, 169, 169, 0.68);
+        }
+        & .ticket-right {
+            flex: 3;
+            padding: 24px 0;
+            & .time {
+                display: flex;
+            }
+            & div {
+                flex: 1;
+            }
+            & h1 {
+                font-size: 42px;
+                opacity: .6;
+            }
+            & .line {
+                & .line-air{
+                    display: flex;
+                    align-items: center;
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        opacity: .4;
+                        background: darkgray;
+                    }
+                }
+            }
+            & .to {
+                text-align: center;
+            }
+            & .origin {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                & .origin-name {
+                    text-align: start;
+                    padding: 0 26px;
+                }
+                & .destination-name {
+                    text-align: end;
+                    padding: 0 32px;
+                }
+                & div {
+                    max-width: 280px;
+                    width: 100%;
+                    & h3 {
+                        font-size: 20px;
+                        opacity: .6;
+                    }
+                    & p {
+                        opacity: .4;
+                    }
+                }
+            }
+        }
+    }
+
+}
